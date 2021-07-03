@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controla_Jogador.cs" />
     <Compile Include="Assets\Scripts\ControlaCamera.cs" />
+    <Compile Include="Assets\Scripts\ControlaInimigo.cs" />
     <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes.txt" />
     <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes_Zumbi.txt" />
     <Reference Include="UnityEngine.Purchasing">
