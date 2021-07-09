@@ -19,7 +19,7 @@ public class ControlaArma : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(Projetil, CanoDaArma.transform.position, Quaternion.identity);
+            Instantiate(Projetil, CanoDaArma.transform.position, CanoDaArma.transform.rotation);
         }
     }
 }

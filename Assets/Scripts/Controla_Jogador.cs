@@ -7,6 +7,7 @@ public class Controla_Jogador : MonoBehaviour
 
     public float velocidadeDeMovimento = 10;
     private Vector3 direcao;
+    public LayerMask MascaraChao;
 
     // Start is called before the first frame update
     void Start() 
@@ -34,5 +35,20 @@ public class Controla_Jogador : MonoBehaviour
     {
         GetComponent<Rigidbody>().MovePosition
             (transform.position + (direcao * velocidadeDeMovimento * Time.deltaTime));
+
+        Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        Debug.DrawRay(raio.origin, raio.direction * 100, Color.red);
+
+        RaycastHit impacto;
+
+        if(Physics.Raycast(raio, out impacto, 100, MascaraChao))
+        {
+            Vector3 posicaoMiraJogador = impacto.point - transform.position;
+            posicaoMiraJogador.y = transform.position.y;
+
+            Quaternion novaRotacao = Quaternion.LookRotation(posicaoMiraJogador);
+            GetComponent<Rigidbody>().MoveRotation(novaRotacao);
+        }
     }
 }
