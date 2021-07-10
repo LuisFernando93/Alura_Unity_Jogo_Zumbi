@@ -22,4 +22,5 @@ public class ControlaArma : MonoBehaviour
             Instantiate(Projetil, CanoDaArma.transform.position, CanoDaArma.transform.rotation);
         }
     }
+
 }
