@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Controla_Jogador : MonoBehaviour 
 {
@@ -8,11 +9,13 @@ public class Controla_Jogador : MonoBehaviour
     public float velocidadeDeMovimento = 10;
     private Vector3 direcao;
     public LayerMask MascaraChao;
+    public GameObject TextoGameOver;
+    public bool Vivo = true;
 
     // Start is called before the first frame update
     void Start() 
     {
-        
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -28,8 +31,18 @@ public class Controla_Jogador : MonoBehaviour
         } else {
             GetComponent<Animator>().SetBool("moving", false);
         }
-            
+
+        if(Vivo == false)
+        {
+            if(Input.GetButtonDown("Fire1"))
+            {
+                SceneManager.LoadScene("Game");
+            }
+        }
+
     }
+
+
 
     void FixedUpdate()
     {
