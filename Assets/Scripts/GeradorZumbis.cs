@@ -7,7 +7,7 @@ public class GeradorZumbis : MonoBehaviour
 
     public GameObject Zumbi;
     float timer = 0;
-    float tempoGerarZumbi = 1;
+    public float tempoGerarZumbi;
 
     // Start is called before the first frame update
     void Start()

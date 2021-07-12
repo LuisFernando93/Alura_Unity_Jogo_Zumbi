@@ -6,17 +6,18 @@ public class Projetil : MonoBehaviour
 {
 
     public float Velocidade = 20;
+    private Rigidbody rigidbodyProjetil;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbodyProjetil = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + transform.forward * Velocidade * Time.deltaTime);
+        rigidbodyProjetil.MovePosition(GetComponent<Rigidbody>().position + transform.forward * Velocidade * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider objetoColisao)

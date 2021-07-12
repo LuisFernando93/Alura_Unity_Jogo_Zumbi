@@ -11,11 +11,16 @@ public class Controla_Jogador : MonoBehaviour
     public LayerMask MascaraChao;
     public GameObject TextoGameOver;
     public bool Vivo = true;
+    private Rigidbody rigidbodyJogador;
+    private Animator animatorJogador;
 
     // Start is called before the first frame update
     void Start() 
     {
         Time.timeScale = 1;
+        rigidbodyJogador = GetComponent<Rigidbody>();
+        animatorJogador = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -27,9 +32,9 @@ public class Controla_Jogador : MonoBehaviour
         direcao = new Vector3(eixoX,0,eixoZ);
         
         if(direcao != Vector3.zero) {
-            GetComponent<Animator>().SetBool("moving", true);
+            animatorJogador.SetBool("moving", true);
         } else {
-            GetComponent<Animator>().SetBool("moving", false);
+            animatorJogador.SetBool("moving", false);
         }
 
         if(Vivo == false)
@@ -46,8 +51,8 @@ public class Controla_Jogador : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().MovePosition
-            (transform.position + (direcao * velocidadeDeMovimento * Time.deltaTime));
+        rigidbodyJogador.MovePosition
+            (rigidbodyJogador.position + (direcao * velocidadeDeMovimento * Time.deltaTime));
 
         Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -61,7 +66,7 @@ public class Controla_Jogador : MonoBehaviour
             posicaoMiraJogador.y = transform.position.y;
 
             Quaternion novaRotacao = Quaternion.LookRotation(posicaoMiraJogador);
-            GetComponent<Rigidbody>().MoveRotation(novaRotacao);
+            rigidbodyJogador.MoveRotation(novaRotacao);
         }
     }
 }
