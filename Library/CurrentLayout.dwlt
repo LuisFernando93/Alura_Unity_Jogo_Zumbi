@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 474}
   m_MaxSize: {x: 18006, y: 14024}
   vertical: 0
-  controlID: 63
+  controlID: 124
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 474}
   m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 64
+  controlID: 47
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -480,19 +480,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs/Personagens
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs/Personagens
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/luisfernando/Documents/Projetos/Alura/Unity/apocalipse-zumbi-alura
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 67}
-    m_SelectedIDs: 4c280000
-    m_LastClickedID: 10316
+    m_SelectedIDs: ba2a0000
+    m_LastClickedID: 10938
     m_ExpandedIDs: 000000004c2800008a2800009a2c0000c02f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -548,19 +548,19 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ec3300000e2a000010330000c42e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Projetil
-      m_OriginalName: Projetil
+      m_Name: Personagens
+      m_OriginalName: Personagens
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 9252
+      m_UserData: 10938
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -688,9 +688,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -390.11682, y: -534.59827, z: 789.7173}
+    m_Target: {x: -419.34903, y: -392.11365, z: 913.2393}
     speed: 2
-    m_Value: {x: -390.11682, y: -534.59827, z: 789.7173}
+    m_Value: {x: -419.34903, y: -392.11365, z: 913.2393}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -718,13 +718,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.26446033, y: -0.2021004, z: 0.05678253, w: 0.9412715}
+    m_Target: {x: 0.18368274, y: -0.19178218, z: 0.03656555, w: 0.9634019}
     speed: 2
-    m_Value: {x: 0.26446033, y: -0.2021004, z: 0.05678253, w: 0.9412715}
+    m_Value: {x: 0.18368274, y: -0.19178218, z: 0.03656555, w: 0.9634019}
   m_Size:
-    m_Target: 1060.7463
+    m_Target: 1109.6697
     speed: 2
-    m_Value: 1060.7463
+    m_Value: 1109.6697
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -765,25 +765,25 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: defbffff
-      m_LastClickedID: -1058
-      m_ExpandedIDs: f6aaffffdefbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: defbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: GerarZumbi
+        m_OriginalName: GerarZumbi
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -2426
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
