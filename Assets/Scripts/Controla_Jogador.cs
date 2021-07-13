@@ -10,9 +10,11 @@ public class Controla_Jogador : MonoBehaviour
     private Vector3 direcao;
     public LayerMask MascaraChao;
     public GameObject TextoGameOver;
-    public bool Vivo = true;
     private Rigidbody rigidbodyJogador;
     private Animator animatorJogador;
+    public int Vida;
+    public ControlaInterface scriptControlaInterface;
+
 
     // Start is called before the first frame update
     void Start() 
@@ -37,7 +39,7 @@ public class Controla_Jogador : MonoBehaviour
             animatorJogador.SetBool("moving", false);
         }
 
-        if(Vivo == false)
+        if(Vida <= 0)
         {
             if(Input.GetButtonDown("Fire1"))
             {
@@ -69,4 +71,16 @@ public class Controla_Jogador : MonoBehaviour
             rigidbodyJogador.MoveRotation(novaRotacao);
         }
     }
+
+    public void TomarDano(int dano)
+    {
+        Vida -= dano;
+        scriptControlaInterface.AtualizarSliderVidaJogador();
+        if (Vida <= 0)
+        {
+            Time.timeScale = 0;
+            TextoGameOver.SetActive(true);
+        }
+    }
+
 }
