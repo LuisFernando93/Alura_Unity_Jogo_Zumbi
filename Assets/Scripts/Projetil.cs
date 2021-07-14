@@ -7,6 +7,7 @@ public class Projetil : MonoBehaviour
 
     public float Velocidade = 20;
     private Rigidbody rigidbodyProjetil;
+    public AudioClip SomMorte;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class Projetil : MonoBehaviour
         if (objetoColisao.tag == "Inimigo")
         {
             Destroy(objetoColisao.gameObject);
+            ControlaAudio.instancia.PlayOneShot(SomMorte);
+            
         }
 
         Destroy(gameObject);

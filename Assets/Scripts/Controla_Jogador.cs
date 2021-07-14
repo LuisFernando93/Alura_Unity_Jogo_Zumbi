@@ -14,6 +14,7 @@ public class Controla_Jogador : MonoBehaviour
     private Animator animatorJogador;
     public int Vida;
     public ControlaInterface scriptControlaInterface;
+    public AudioClip SomDano;
 
 
     // Start is called before the first frame update
@@ -22,7 +23,6 @@ public class Controla_Jogador : MonoBehaviour
         Time.timeScale = 1;
         rigidbodyJogador = GetComponent<Rigidbody>();
         animatorJogador = GetComponent<Animator>();
-
     }
 
     // Update is called once per frame
@@ -76,6 +76,7 @@ public class Controla_Jogador : MonoBehaviour
     {
         Vida -= dano;
         scriptControlaInterface.AtualizarSliderVidaJogador();
+        ControlaAudio.instancia.PlayOneShot(SomDano);
         if (Vida <= 0)
         {
             Time.timeScale = 0;

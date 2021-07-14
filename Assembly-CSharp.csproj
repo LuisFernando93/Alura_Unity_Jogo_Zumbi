@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controla_Jogador.cs" />
     <Compile Include="Assets\Scripts\ControlaArma.cs" />
+    <Compile Include="Assets\Scripts\ControlaAudio.cs" />
     <Compile Include="Assets\Scripts\ControlaCamera.cs" />
     <Compile Include="Assets\Scripts\ControlaInimigo.cs" />
     <Compile Include="Assets\Scripts\ControlaInterface.cs" />
