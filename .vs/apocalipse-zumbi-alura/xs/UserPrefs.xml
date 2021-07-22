@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{28BBA9C8-DEB4-3DCF-DCFA-4A7236070067}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Projetil.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControlaInimigo.cs">
     <Files>
-      <File FileName="Assets/Scripts/ControlaAudio.cs" Line="7" Column="28" />
-      <File FileName="Assets/Scripts/ControlaInterface.cs" Line="24" Column="9" />
-      <File FileName="Assets/Scripts/Controla_Jogador.cs" Line="79" Column="9" />
-      <File FileName="Assets/Scripts/ControlaInimigo.cs" Line="39" Column="56" />
-      <File FileName="Assets/Scripts/ControlaArma.cs" Line="24" Column="56" />
-      <File FileName="Assets/Scripts/Projetil.cs" Line="28" Column="13" />
+      <File FileName="Assets/Scripts/ControlaInimigo.cs" Line="9" Column="28" />
+      <File FileName="Assets/Scripts/MovimentaPersonagem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controla_Jogador.cs" Line="20" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +11,7 @@
           <Node name="apocalipse-zumbi-alura" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Projetil.cs" selected="True" />
+                <Node name="ControlaInimigo.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -24,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7a13eb34-1e1e-4f94-b847-622be711a8e0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fd5f89c7-0ec3-4ee9-b8f0-2a7ad7acdde6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

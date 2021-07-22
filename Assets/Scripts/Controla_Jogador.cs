@@ -6,23 +6,22 @@ using UnityEngine.SceneManagement;
 public class Controla_Jogador : MonoBehaviour 
 {
 
-    public float velocidadeDeMovimento = 10;
+    public float velocidadeDeMovimento;
     private Vector3 direcao;
     public LayerMask MascaraChao;
     public GameObject TextoGameOver;
-    private Rigidbody rigidbodyJogador;
     private Animator animatorJogador;
     public int Vida;
     public ControlaInterface scriptControlaInterface;
     public AudioClip SomDano;
-
+    private MovimentaPersonagem movimentaJogador;
 
     // Start is called before the first frame update
     void Start() 
     {
         Time.timeScale = 1;
-        rigidbodyJogador = GetComponent<Rigidbody>();
         animatorJogador = GetComponent<Animator>();
+        movimentaJogador = GetComponent<MovimentaPersonagem>();
     }
 
     // Update is called once per frame
@@ -53,8 +52,7 @@ public class Controla_Jogador : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbodyJogador.MovePosition
-            (rigidbodyJogador.position + (direcao * velocidadeDeMovimento * Time.deltaTime));
+        movimentaJogador.Movimentar(direcao, velocidadeDeMovimento);
 
         Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -67,8 +65,7 @@ public class Controla_Jogador : MonoBehaviour
             Vector3 posicaoMiraJogador = impacto.point - transform.position;
             posicaoMiraJogador.y = transform.position.y;
 
-            Quaternion novaRotacao = Quaternion.LookRotation(posicaoMiraJogador);
-            rigidbodyJogador.MoveRotation(novaRotacao);
+            movimentaJogador.Rotacionar(posicaoMiraJogador);
         }
     }
 
