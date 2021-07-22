@@ -14,6 +14,6 @@ public class AnimacaoPersonagem : MonoBehaviour
 
     public void Atacar(bool estado)
     {
-        meuAnimator.SetBool("atacando", estado);
+        meuAnimator.SetBool("Atacando", estado);
     }
 }
