@@ -7,17 +7,16 @@ public class ControlaInimigo : MonoBehaviour
 
     public GameObject Jogador;
     public float Velocidade;
-    private Animator animatorInimigo;
+    private AnimacaoPersonagem animacaoInimigo;
     private MovimentaPersonagem movimentaInimigo;
 
     // Start is called before the first frame update
     void Start()
     {
         Jogador = GameObject.FindWithTag("Jogador");
-        int geraTipoZumbi = Random.Range(1, 28);
-        transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
+        aleatorizarZumbi();
 
-        animatorInimigo = GetComponent<Animator>();
+        animacaoInimigo = GetComponent<AnimacaoPersonagem>();
         movimentaInimigo = GetComponent<MovimentaPersonagem>();
     }
 
@@ -35,11 +34,11 @@ public class ControlaInimigo : MonoBehaviour
 
             movimentaInimigo.Movimentar(direcao, Velocidade);
 
-            animatorInimigo.SetBool("Atacando", false);
+            animacaoInimigo.Atacar(false);
         }
         else
         {
-            animatorInimigo.SetBool("Atacando", true);
+            animacaoInimigo.Atacar(true);
         }
     }
 
@@ -47,5 +46,11 @@ public class ControlaInimigo : MonoBehaviour
     {
         int dano = Random.Range(10, 20);
         Jogador.GetComponent<Controla_Jogador>().TomarDano(dano);
+    }
+    
+    private void aleatorizarZumbi()
+    {
+        int geraTipoZumbi = Random.Range(1, 28);
+        transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
     }
 }
