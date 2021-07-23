@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\ControlaInimigo.cs" />
     <Compile Include="Assets\Scripts\ControlaInterface.cs" />
     <Compile Include="Assets\Scripts\GeradorZumbis.cs" />
+    <Compile Include="Assets\Scripts\MovimentaJogador.cs" />
     <Compile Include="Assets\Scripts\MovimentaPersonagem.cs" />
     <Compile Include="Assets\Scripts\Projetil.cs" />
     <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes.txt" />

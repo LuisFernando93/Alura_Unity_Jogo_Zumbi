@@ -2470,7 +2470,8 @@ GameObject:
   - component: {fileID: 840473406}
   - component: {fileID: 840473405}
   - component: {fileID: 840473409}
-  - component: {fileID: 8271868663705223681}
+  - component: {fileID: 1383880979144117598}
+  - component: {fileID: 28120971286126136}
   m_Layer: 0
   m_Name: Personagens
   m_TagString: Jogador
@@ -2577,7 +2578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21d258940c414896a44cd24b9717c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeDeMovimento: 15
+  velocidadeDeMovimento: 10
   MascaraChao:
     serializedVersion: 2
     m_Bits: 256
@@ -2601,7 +2602,7 @@ MonoBehaviour:
     type: 3}
   CanoDaArma: {fileID: 854958166}
   SomTiro: {fileID: 8300000, guid: 9034552e8f4724bba99b34661b2d30ae, type: 3}
---- !u!114 &8271868663705223681
+--- !u!114 &1383880979144117598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2610,7 +2611,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884102019447498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d7e40533b8149e69be3ce71ff41aa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 912a39e12032642f89a7b5c5040f9f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &28120971286126136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884102019447498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf391759a99e5416a835945e5b46c9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1938851689004064
