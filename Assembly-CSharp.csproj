@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\MovimentaJogador.cs" />
     <Compile Include="Assets\Scripts\MovimentaPersonagem.cs" />
     <Compile Include="Assets\Scripts\Projetil.cs" />
+    <Compile Include="Assets\Scripts\Status.cs" />
     <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes.txt" />
     <None Include="Assets\Modelos3D\Personagens\Animacoes\Animacoes_Zumbi.txt" />
     <Reference Include="UnityEngine.Purchasing">

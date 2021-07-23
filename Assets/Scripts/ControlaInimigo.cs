@@ -6,9 +6,9 @@ public class ControlaInimigo : MonoBehaviour
 {
 
     public GameObject Jogador;
-    public float Velocidade;
     private AnimacaoPersonagem animacaoInimigo;
     private MovimentaPersonagem movimentaInimigo;
+    private Status statusInimigo;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class ControlaInimigo : MonoBehaviour
 
         animacaoInimigo = GetComponent<AnimacaoPersonagem>();
         movimentaInimigo = GetComponent<MovimentaPersonagem>();
+        statusInimigo = GetComponent<Status>();
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class ControlaInimigo : MonoBehaviour
         if (distancia > 2.5)
         {
 
-            movimentaInimigo.Movimentar(direcao, Velocidade);
+            movimentaInimigo.Movimentar(direcao, statusInimigo.Velocidade);
 
             animacaoInimigo.Atacar(false);
         }

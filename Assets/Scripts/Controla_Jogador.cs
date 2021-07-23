@@ -6,15 +6,14 @@ using UnityEngine.SceneManagement;
 public class Controla_Jogador : MonoBehaviour 
 {
 
-    public float velocidadeDeMovimento;
     private Vector3 direcao;
     public LayerMask MascaraChao;
     public GameObject TextoGameOver;
     private AnimacaoPersonagem animacaoJogador;
-    public int Vida;
     public ControlaInterface scriptControlaInterface;
     public AudioClip SomDano;
     private MovimentaJogador movimentaJogador;
+    public Status statusJogador;
 
     // Start is called before the first frame update
     void Start() 
@@ -22,6 +21,7 @@ public class Controla_Jogador : MonoBehaviour
         Time.timeScale = 1;
         animacaoJogador = GetComponent<AnimacaoPersonagem>();
         movimentaJogador = GetComponent<MovimentaJogador>();
+        statusJogador = GetComponent<Status>();
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class Controla_Jogador : MonoBehaviour
 
         animacaoJogador.AnimarMovimento(direcao);
 
-        if(Vida <= 0)
+        if(statusJogador.Vida <= 0)
         {
             if(Input.GetButtonDown("Fire1"))
             {
@@ -48,17 +48,17 @@ public class Controla_Jogador : MonoBehaviour
 
     void FixedUpdate()
     {
-        movimentaJogador.Movimentar(direcao, velocidadeDeMovimento);
+        movimentaJogador.Movimentar(direcao, statusJogador.Velocidade);
 
         movimentaJogador.RotacionarJogador(MascaraChao);
     }
 
     public void TomarDano(int dano)
     {
-        Vida -= dano;
+        statusJogador.Vida -= dano;
         scriptControlaInterface.AtualizarSliderVidaJogador();
         ControlaAudio.instancia.PlayOneShot(SomDano);
-        if (Vida <= 0)
+        if (statusJogador.Vida <= 0)
         {
             Time.timeScale = 0;
             TextoGameOver.SetActive(true);
