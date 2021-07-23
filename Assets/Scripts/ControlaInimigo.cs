@@ -14,7 +14,7 @@ public class ControlaInimigo : MonoBehaviour, IMatavel
     // Start is called before the first frame update
     void Start()
     {
-        Jogador = GameObject.FindWithTag("Jogador");
+        Jogador = GameObject.FindWithTag(Tags.Jogador);
         aleatorizarZumbi();
 
         animacaoInimigo = GetComponent<AnimacaoPersonagem>();

@@ -7,6 +7,7 @@ public class Projetil : MonoBehaviour
 
     public float Velocidade = 20;
     private Rigidbody rigidbodyProjetil;
+    private int DanoDoProjetil = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class Projetil : MonoBehaviour
     {
         if (objetoColisao.tag == "Inimigo")
         {
-            objetoColisao.GetComponent<ControlaInimigo>().TomarDano(1);
+            objetoColisao.GetComponent<ControlaInimigo>().TomarDano(DanoDoProjetil);
         }
 
         Destroy(gameObject);
