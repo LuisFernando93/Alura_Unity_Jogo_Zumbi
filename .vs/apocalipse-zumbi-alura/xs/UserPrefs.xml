@@ -1,13 +1,11 @@
 ﻿<Properties StartupConfiguration="{28BBA9C8-DEB4-3DCF-DCFA-4A7236070067}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControlaInterface.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControlaInimigo.cs">
     <Files>
       <File FileName="Assets/Scripts/Status.cs" Line="14" Column="28" />
       <File FileName="Assets/Scripts/MovimentaJogador.cs" Line="24" Column="1" />
       <File FileName="Assets/Scripts/AnimacaoPersonagem.cs" />
       <File FileName="Assets/Scripts/Controla_Jogador.cs" Line="51" Column="70" />
-      <File FileName="Assets/Scripts/MovimentaPersonagem.cs" />
-      <File FileName="Assets/Scripts/ControlaInimigo.cs" />
-      <File FileName="Assets/Scripts/ControlaInterface.cs" Line="17" Column="63" />
+      <File FileName="Assets/Scripts/ControlaInimigo.cs" Line="71" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +13,7 @@
           <Node name="apocalipse-zumbi-alura" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="ControlaInterface.cs" selected="True" />
+                <Node name="ControlaInimigo.cs" selected="True" />
               </Node>
             </Node>
           </Node>

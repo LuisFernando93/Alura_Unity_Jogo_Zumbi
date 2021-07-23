@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Controla_Jogador : MonoBehaviour 
+public class Controla_Jogador : MonoBehaviour, IMatavel
 {
 
     private Vector3 direcao;
@@ -60,9 +60,13 @@ public class Controla_Jogador : MonoBehaviour
         ControlaAudio.instancia.PlayOneShot(SomDano);
         if (statusJogador.Vida <= 0)
         {
-            Time.timeScale = 0;
-            TextoGameOver.SetActive(true);
+            Morrer();
         }
     }
 
+    public void Morrer()
+    {
+        Time.timeScale = 0;
+        TextoGameOver.SetActive(true);
+    }
 }
